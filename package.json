@@ -1,14 +1,11 @@
 {
-  "name": "react",
+  "name": "femaster-statemachinejs",
   "version": "1.0.0",
-  "description": "React example starter project",
-  "keywords": [
-    "react",
-    "starter"
-  ],
+  "description": "Learning State Machine in JS with Frontend Masters",
+  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "bootstrap": "5.0.0-beta2",
+    "bootstrap": "4.6.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-scripts": "4.0.0"

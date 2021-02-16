@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { transition, send } from "../machine/machine";
+
 import "../styles/style00.scss";
 
 export default function Exercise00() {
@@ -9,7 +11,7 @@ export default function Exercise00() {
   useEffect(() => {
     const user = {
       name: "Oleksandra Holovko",
-      company: "free lancer",
+      company: "freelancer",
       interests: ["frontend web development", "diving", "paddle boarding"]
     };
     const elOutput = document.querySelector("#output");
@@ -22,12 +24,19 @@ export default function Exercise00() {
     });
 
     output(user, elOutput);
+
+    console.log(transition("idle", "FETCH"));
+    console.log(transition("pending", "FETCH"));
+    console.log(transition("pending", "RESOLVE"));
+
+    send("FETCH");
+    send("RESOLVE");
   }, []);
 
   return (
     <>
       <header>
-        <h1>Exercise 00 - Welcome</h1>
+        <h4>Exercise 00 - Welcome</h4>
       </header>
       <main>
         <button style={{ width: "11rem" }} id="button">

@@ -1,16 +1,17 @@
-import AccordionItem from "./components/AccordionItem";
-import Exercise00 from "./components/Exercise00";
-import Exercise01 from "./components/Exercise01";
+import AccordionItem from './components/AccordionItem'
+import Exercise00 from './components/Exercise00'
+import Exercise01 from './components/Exercise01'
+import Exercise02 from './components/Exercise02'
 
 export default function App() {
   const exercises = [
-    { title: "Exercise 00 - Welcome", component: <Exercise00 /> },
+    { title: 'Exercise 00 - Welcome', component: <Exercise00 /> },
     {
-      title: "Exercise 01 - Creating a state machine",
+      title: 'Exercise 01 - Creating a state machine',
       component: <Exercise01 />
-    }
-    // { title: "Exercise 02 - Welcome", component: <Exercise02 /> }
-  ];
+    },
+    { title: 'Exercise 02 - XState', component: <Exercise02 /> }
+  ]
 
   return (
     <div className="App container">
@@ -26,5 +27,5 @@ export default function App() {
         ))}
       </div>
     </div>
-  );
+  )
 }

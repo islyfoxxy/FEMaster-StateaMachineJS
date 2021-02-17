@@ -1,61 +1,61 @@
 // Interpreting state machines
 
 const machine = {
-  initial: "idle",
+  initial: 'idle',
   states: {
     idle: {
       on: {
-        FETCH: "pending"
+        FETCH: 'pending'
       }
     },
     pending: {
       on: {
-        RESOLVE: "resolved",
-        REJECT: "rejected"
+        RESOLVE: 'resolved',
+        REJECT: 'rejected'
       }
     },
     resolved: {},
     rejected: {}
   }
-};
+}
 
 //keep track of current state
-let currentState = machine.initial;
+let currentState = machine.initial
 
 const transition = (state, event) => {
-  return machine.states[state]?.on?.[event] || state;
-};
+  return machine.states[state]?.on?.[event] || state
+}
 
 //receive events
 const send = (event) => {
-  const nextState = transition(currentState, event);
-  console.log(`${currentState} - ${event} - ${nextState}`);
-  currentState = nextState;
-};
+  const nextState = transition(currentState, event)
+  console.log(`${currentState} - ${event} - ${nextState}`)
+  currentState = nextState
+}
 
 function transitionSwitch(state, event) {
   switch (state) {
-    case "idle":
+    case 'idle':
       switch (event) {
-        case "FETCH":
-          return "pending";
+        case 'FETCH':
+          return 'pending'
         default:
-          return state;
+          return state
       }
-    case "pending":
+    case 'pending':
       switch (event) {
-        case "RESOLVE":
-          return "resolved";
-        case "REJECT":
-          return "rejected";
+        case 'RESOLVE':
+          return 'resolved'
+        case 'REJECT':
+          return 'rejected'
         default:
-          return state;
+          return state
       }
-    case "resolved":
-    case "rejected":
+    case 'resolved':
+    case 'rejected':
     default:
-      return state;
+      return state
   }
 }
 
-export { machine, transition, send, transitionSwitch };
+export { machine, transition, send, transitionSwitch }

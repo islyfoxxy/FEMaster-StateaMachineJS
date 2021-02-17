@@ -37,12 +37,12 @@ h1 {
   border-radius: 0.5rem;
 }
 
-#box[data-state^="dragging"] {
+#box[data-state^='dragging'] {
   opacity: 0.8;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
 }
 
-#box[data-state="idle"] {
+#box[data-state='idle'] {
   transition: all 0.3s ease-in-out;
 }
 

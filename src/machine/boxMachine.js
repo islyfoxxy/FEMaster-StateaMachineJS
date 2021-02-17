@@ -1,49 +1,49 @@
 const machine = {
-  initial: "inactive",
+  initial: 'inactive',
   states: {
     inactive: {
       on: {
-        CLICK: "active"
+        CLICK: 'active'
       }
     },
     active: {
       on: {
-        CLICK: "inactive"
+        CLICK: 'inactive'
       }
     }
   }
-};
+}
 
-let state = machine.initial;
+let state = machine.initial
 
 const transition = (state, event) => {
-  return machine.states[state]?.on?.[event] || state;
-};
+  return machine.states[state]?.on?.[event] || state
+}
 
 const send = (event) => {
-  const nextState = transition(state, event);
-  state = nextState;
-};
+  const nextState = transition(state, event)
+  state = nextState
+}
 
 const switchTransition = (state, event) => {
   switch (state) {
-    case "inactive":
+    case 'inactive':
       switch (event) {
-        case "CLICK":
-          return "active";
+        case 'CLICK':
+          return 'active'
         default:
-          return state;
+          return state
       }
-    case "active":
+    case 'active':
       switch (event) {
-        case "CLICK":
-          return "inactive";
+        case 'CLICK':
+          return 'inactive'
         default:
-          return state;
+          return state
       }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export { send, state, switchTransition };
+export { send, state, machine, switchTransition }

@@ -25,5 +25,5 @@ export default function AccordionItem({ title, component, index }) {
         <div className="card-body mb-5">{component}</div>
       </div>
     </div>
-  );
+  )
 }

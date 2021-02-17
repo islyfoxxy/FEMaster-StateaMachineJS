@@ -1,24 +1,24 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from 'react'
 // import { switchTransition } from "../machine/boxMachine";
-import { send, state } from "../machine/boxMachine";
-import "../styles/style01.scss";
+import { send, state } from '../machine/boxMachine'
+import '../styles/style01.scss'
 
 export default function Exercise01() {
-  const boxRef = useRef(null);
-  const [currentState, setCurrentState] = useState("inactive");
+  const boxRef = useRef(null)
+  const [currentState, setCurrentState] = useState('inactive')
   const onClick = () => {
     // switch state machine example
     // const nextState = switchTransition(currentState, "CLICK");
     // setCurrentState(nextState);
 
     // object state machine example
-    send("CLICK");
-    setCurrentState(state);
-  };
+    send('CLICK')
+    setCurrentState(state)
+  }
 
   useEffect(() => {
-    setCurrentState(state);
-  }, []);
+    setCurrentState(state)
+  }, [])
 
   return (
     <div>
@@ -34,5 +34,5 @@ export default function Exercise01() {
         />
       </main>
     </div>
-  );
+  )
 }

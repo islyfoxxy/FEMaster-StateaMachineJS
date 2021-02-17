@@ -1,12 +1,12 @@
 import { useState, useRef } from 'react'
 import { Machine } from 'xstate'
 import { machine } from '../machine/boxMachine'
-import '../styles/style01.scss'
+import '../styles/style02.scss'
 
 export default function Exercise02() {
   const boxRef = useRef(null)
   const boxMachine = Machine(machine)
-  const [currentState, setCurrentState] = useState(boxMachine.initials)
+  const [currentState, setCurrentState] = useState(boxMachine.initial)
 
   const send = (event) => {
     const nextState = boxMachine.transition(currentState, event)
@@ -18,7 +18,8 @@ export default function Exercise02() {
   return (
     <div>
       <header>
-        <h4>Exercise 02 - XState</h4>
+        <h5>Goals</h5>
+        <p>Refactor the previous state machine with XState.</p>
       </header>
       <main>
         <div

@@ -23,9 +23,9 @@ export default function Exercise00() {
   // )
   // console.log('nextState:', nextState)
 
-  const output = (object, element) => {
-    element.innerHTML = JSON.stringify(object, null, 2)
-  }
+  // const output = (object, element) => {
+  //   element.innerHTML = JSON.stringify(object, null, 2)
+  // }
 
   useEffect(() => {
     // const user = {
@@ -49,23 +49,29 @@ export default function Exercise00() {
     // send('FETCH')
     // send('RESOLVE')
 
-    feedbackService
-      .onTransition((state) => console.log('STATE:', state.value))
-      .start()
-      .send({ type: 'CLICK_GOOD' })
+    // feedbackService
+    //   .onTransition((state) => console.log('STATE:', state.value))
+    //   .start()
+    //   .send({ type: 'CLICK_GOOD' })
 
-    feedbackService.send('CLOSE')
-    feedbackService.stop()
+    // feedbackService.send('CLOSE')
+    // feedbackService.stop()
 
     return () => {
-      feedbackService.stop()
+      // feedbackService.stop()
     }
   }, [])
 
   return (
     <>
       <header>
-        <h4>Exercise 00 - Welcome</h4>
+        <h5>Goals</h5>
+        <p>
+          Use this exercise as a scratchpad{' '}
+          <span aria-label="scratchpad" role="img">
+            📝
+          </span>
+        </p>
       </header>
       <main>
         <button style={{ width: '11rem' }} id="button">

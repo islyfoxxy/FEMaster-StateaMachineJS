@@ -2,6 +2,8 @@ import AccordionItem from './components/AccordionItem'
 import Exercise00 from './components/Exercise00'
 import Exercise01 from './components/Exercise01'
 import Exercise02 from './components/Exercise02'
+import Exercise03 from './components/Exercise03'
+import Exercise04 from './components/Exercise04'
 
 export default function App() {
   const exercises = [
@@ -10,7 +12,12 @@ export default function App() {
       title: 'Exercise 01 - Creating a state machine',
       component: <Exercise01 />
     },
-    { title: 'Exercise 02 - XState', component: <Exercise02 /> }
+    { title: 'Exercise 02 - XState', component: <Exercise02 /> },
+    {
+      title: 'Exercise 03 - Interpreter',
+      component: <Exercise03 />
+    },
+    { title: 'Exercise 04 - Actions', component: <Exercise04 /> }
   ]
 
   return (

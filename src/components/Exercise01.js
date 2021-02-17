@@ -23,7 +23,11 @@ export default function Exercise01() {
   return (
     <div>
       <header>
-        <h4>Exercise 01 - Creating a state machine</h4>
+        <h5>Goals</h5>
+        <p>
+          Create a state machine that toggles the #box between the inactive and
+          active states when clicked.
+        </p>
       </header>
       <main>
         <div

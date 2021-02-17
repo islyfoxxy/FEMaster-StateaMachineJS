@@ -1,0 +1,9 @@
+@import './index.scss';
+
+#box {
+  opacity: 0.5;
+
+  &[data-state='active'] {
+    opacity: 1;
+  }
+}

@@ -4,6 +4,7 @@ import Exercise01 from './components/Exercise01'
 import Exercise02 from './components/Exercise02'
 import Exercise03 from './components/Exercise03'
 import Exercise04 from './components/Exercise04'
+import Exercise05 from './components/Exercise05'
 
 export default function App() {
   const exercises = [
@@ -17,7 +18,8 @@ export default function App() {
       title: 'Exercise 03 - Interpreter',
       component: <Exercise03 />
     },
-    { title: 'Exercise 04 - Actions', component: <Exercise04 /> }
+    { title: 'Exercise 04 - Actions', component: <Exercise04 /> },
+    { title: 'Exercise 05 - Context', component: <Exercise05 /> }
   ]
 
   return (
@@ -27,7 +29,6 @@ export default function App() {
           <h3>State Machine in Javascript</h3>
         </div>
       </div>
-
       <div className="accordion" id="exercises">
         {exercises.map(({ title, component }, index) => (
           <AccordionItem key={index} {...{ title, component, index }} />

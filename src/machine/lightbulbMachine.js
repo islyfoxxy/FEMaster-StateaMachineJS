@@ -33,4 +33,4 @@ const assignAction = assign({
   count: (context, event) => context.count + event.value
 })
 
-console.log('assignAction', assignAction)
+export { lightbulbMachine, assignAction }

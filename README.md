@@ -130,3 +130,18 @@ We don't want the `#box` to be draggable unless we are authorized (i.e., there i
 ## Extra Credit
 
 - If we're not authorized, give us a chance to sign in. The sign in button is available on the page. What should this transition look like, and where should it transition to?
+
+# Exercise 08 - Delayed Transitions
+
+## Goals
+
+Ensure that you can't drag the box for more than 2 seconds.
+
+## Tips
+
+- Use a delayed transition via `after: { ... }` to transition back to `idle` from `dragging` after 2 seconds.
+- Parameterize the 2 second timeout.
+
+## Extra Credit
+
+- How would you make the timeout configurable from the `context` instead?

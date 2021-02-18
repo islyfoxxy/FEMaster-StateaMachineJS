@@ -6,6 +6,7 @@ import Exercise03 from './components/Exercise03'
 import Exercise04 from './components/Exercise04'
 import Exercise05 from './components/Exercise05'
 import Exercise06 from './components/Exercise06'
+import Exercise07 from './components/Exercise07'
 
 export default function App() {
   const exercises = [
@@ -21,7 +22,8 @@ export default function App() {
     },
     { title: 'Exercise 04 - Actions', component: <Exercise04 /> },
     { title: 'Exercise 05 - Context', component: <Exercise05 /> },
-    { title: 'Exercise 06 - Guarded Transitions', component: <Exercise06 /> }
+    { title: 'Exercise 06 - Guarded Transitions', component: <Exercise06 /> },
+    { title: 'Exercise 07 - Transient Transitions', component: <Exercise07 /> }
   ]
 
   return (

@@ -1,0 +1,35 @@
+@import './index.scss';
+
+#box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &[stat-state='active'] {
+    opacity: 1;
+  }
+
+  #button {
+    display: none;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 0;
+    border-bottom: 1px dashed red;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 0;
+    background: transparent;
+    bottom: 40%;
+    left: -50%;
+  }
+
+  &[data-state~='dragging.lockedX'] {
+    &:before {
+      opacity: 1;
+    }
+  }
+}

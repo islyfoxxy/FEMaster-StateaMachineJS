@@ -8,6 +8,7 @@ import Exercise05 from './components/Exercise05'
 import Exercise06 from './components/Exercise06'
 import Exercise07 from './components/Exercise07'
 import Exercise08 from './components/Exercise08'
+import Exercise09 from './components/Exercise09'
 
 export default function App() {
   const exercises = [
@@ -25,11 +26,12 @@ export default function App() {
     { title: 'Exercise 05 - Context', component: <Exercise05 /> },
     { title: 'Exercise 06 - Guarded Transitions', component: <Exercise06 /> },
     { title: 'Exercise 07 - Transient Transitions', component: <Exercise07 /> },
-    { title: 'Exercise 08 - Delayed Transitions', component: <Exercise08 /> }
+    { title: 'Exercise 08 - Delayed Transitions', component: <Exercise08 /> },
+    { title: 'Exercise 09 - Hierarchical States', component: <Exercise09 /> }
   ]
 
   return (
-    <div className="App container">
+    <div className="App container pb-5">
       <div className="row m-2">
         <div className="col-auto mx-auto">
           <h3>State Machine in Javascript</h3>

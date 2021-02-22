@@ -9,6 +9,7 @@ import Exercise06 from './components/Exercise06'
 import Exercise07 from './components/Exercise07'
 import Exercise08 from './components/Exercise08'
 import Exercise09 from './components/Exercise09'
+import Exercise10 from './components/Exercise10'
 
 export default function App() {
   const exercises = [
@@ -27,7 +28,8 @@ export default function App() {
     { title: 'Exercise 06 - Guarded Transitions', component: <Exercise06 /> },
     { title: 'Exercise 07 - Transient Transitions', component: <Exercise07 /> },
     { title: 'Exercise 08 - Delayed Transitions', component: <Exercise08 /> },
-    { title: 'Exercise 09 - Hierarchical States', component: <Exercise09 /> }
+    { title: 'Exercise 09 - Hierarchical States', component: <Exercise09 /> },
+    { title: 'Exercise 10 - History States', component: <Exercise10 /> }
   ]
 
   return (

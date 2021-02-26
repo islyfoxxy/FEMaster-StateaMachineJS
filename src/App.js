@@ -11,6 +11,7 @@ import Exercise08 from './components/Exercise08'
 import Exercise09 from './components/Exercise09'
 import Exercise10 from './components/Exercise10'
 import Exercise11 from './components/Exercise11'
+import Exercise12 from './components/Exercise12'
 
 export default function App() {
   const exercises = [
@@ -31,7 +32,8 @@ export default function App() {
     { title: 'Exercise 08 - Delayed Transitions', component: <Exercise08 /> },
     { title: 'Exercise 09 - Hierarchical States', component: <Exercise09 /> },
     { title: 'Exercise 10 - History States', component: <Exercise10 /> },
-    { title: 'Exercise 11 - Parallel States', component: <Exercise11 /> }
+    { title: 'Exercise 11 - Parallel States', component: <Exercise11 /> },
+    { title: 'Exercise 12 - Invoking Actors', component: <Exercise12 /> }
   ]
 
   return (
